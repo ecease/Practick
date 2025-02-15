@@ -23,5 +23,5 @@ for i in range(N):
         if i >= j:
             print(A[i][j], end=" ")
         else:
-            print(" ", end=" ")  # Можно выводить пробелы вместо значений выше главной диагонали
+            print(" ", end=" ") 
     print()
