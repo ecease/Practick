@@ -8,21 +8,21 @@
 # Ввод текста
 text = input("Введите текст: ")
 
-# Список русских гласных
+#гласные
 vowels = "аеёиоуыэюя"
 
-# Словарь для учёта вхождений гласных по разным словам
+
 vowel_count = {vowel: 0 for vowel in vowels}
 
-# Обрабатываем каждое слово отдельно
+
 words = text.lower().split()
 for word in words:
     unique_vowels_in_word = set(word) & set(vowels)  # Найти гласные в слове
     for vowel in unique_vowels_in_word:
         vowel_count[vowel] += 1  # Увеличиваем счётчик для этой гласной
 
-# Выбираем гласные, которые встречаются только в одном слове
+# Выбираем только которые попадаются в одном слове
 rare_vowels = sorted([v for v, count in vowel_count.items() if count == 1])
 
-# Вывод результата
+
 print("Гласные, которые встречаются не более чем в одном слове:", " ".join(rare_vowels))
