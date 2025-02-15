@@ -10,11 +10,11 @@ def can_form_word(matrix, word):
     # Собир все букв из двумер массива в один список
     all_letters = [letter for row in matrix for letter in row]
     
-    # Счит, сколько раз встречат каждая буква
+    # Счит сколько раз встречат каждая буква
     letters_count = Counter(all_letters)
     word_count = Counter(word)
     
-    # Проверям, достаточ ли букв в матрице, чтобы состав слово
+    # Проверям достаточ ли букв в матрице, чтобы состав слово
     for char, needed in word_count.items():
         if letters_count[char] < needed:
             return False
