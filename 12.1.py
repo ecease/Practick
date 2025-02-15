@@ -35,7 +35,6 @@ k = int(input("Введите минимальное количество нул
 # Генерация множества случайных чисел в диапазоне [a, b]
 random_numbers_set = set(random.randint(a, b) for _ in range(n))
 
-# Формирование результатов с понятными названиями
 results = {
     "Простые числа в множестве": [num for num in random_numbers_set if is_prime(num)],
     "Чётные числа в диапазоне [c, d]": [num for num in random_numbers_set if c <= num <= d and num % 2 == 0],
@@ -45,7 +44,6 @@ results = {
     "Оставшиеся числа": {num for num in random_numbers_set if count_zeros_in_binary(num) <= k}
 }
 
-# Вывод результатов
 print("\n🔹 Результаты анализа множества:")
 for description, value in results.items():
     print(f"{description}: {value}")
