@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Угадай число</title>
+</head>
+<body>
+    <h1>Игра "Угадай число"</h1>
+
+    {% if feedback %}
+        <p>{{ feedback }}</p>
+    {% endif %}
+
+    <form method="POST" action="/">
+        <label for="guess">Введите число:</label>
+        <input type="text" name="guess" id="guess" />
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
